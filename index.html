@@ -6,23 +6,23 @@
 </head>
 
 <body>
-  <button id="btn">点击</button>
+  <button id="btn" style="height:30px;height:30px;">点击</button>
 
   <body>
     <script>
       $("#btn").click(function () {
         try {
           if (navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
-            console.log('ios')
+            alert('ios')
             window.location.href = "weixin://";
           } else if (navigator.userAgent.match(/android/i)) {
-            console.log('安卓')
+            alert('安卓')
             window.location.href = "weixin://"; //app协议，以微信为例
           }
         }
         catch (e) { }
         setTimeout(function () {
-          console.log('下载')
+          alert('下载')
           // 判断是安卓还是ios
           window.location.href = navigator.userAgent.match(/android/i) ? "http://a.app.qq.com/o/simple.jsp?pkgname=com.yunmai.scale" : "https://itunes.apple.com/cn/app/qq/id444934666?mt=8";
         }, 2000);

@@ -14,20 +14,18 @@
         try {
           if (navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
             alert('ios')
-            window.location.href = "com.baidu.tieba://";
+            window.location.href = "weixin://";
           } else if (navigator.userAgent.match(/android/i)) {
             alert('安卓')
-            window.location.href = "com.baidu.tieba://app"; //app协议，以微信为例
+            window.location.href = "weixin://"; //app协议，以微信为例
           }
         }
         catch (e) {
-          alert(e)
           setTimeout(function () {
             alert('下载')
             // 判断是安卓还是ios
             //window.location.href = navigator.userAgent.match(/android/i) ? "http://a.app.qq.com/o/simple.jsp?pkgname=com.yunmai.scale" : "https://itunes.apple.com/cn/app/qq/id444934666?mt=8";
-            // window.location.href = 'https://itunes.apple.com/cn/app/id477927812';
-            window.location.href = navigator.userAgent.match(/android/i) ? "https://downpack.baidu.com/baidutieba_AndroidPhone_1019960r.apk" : "http://c.tieba.baidu.com/c/s/download/redirect";
+            window.location.href = 'http://weixin.qq.com/';
           }, 2000);
         }
       })</script>

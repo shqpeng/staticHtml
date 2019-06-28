@@ -14,21 +14,22 @@
         try {
           if (navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
             alert('ios')
-            alert('微信')
-            window.location.href = "weixin://";
+            alert('贴吧')
+            window.location.href = "com.baidu.tieba://";
           } else if (navigator.userAgent.match(/android/i)) {
             alert('安卓')
-            alert('微信')
-            window.location.href = "weixin://"; //app协议，以微信为例
+            alert('贴吧')
+            window.location.href = "com.baidu.tieba://app"; //app协议，以微信为例
           }
         }
         catch (e) {
           setTimeout(function () {
             alert('下载')
-            alert('微信')
+            alert('贴吧')
             // 判断是安卓还是ios
             //window.location.href = navigator.userAgent.match(/android/i) ? "http://a.app.qq.com/o/simple.jsp?pkgname=com.yunmai.scale" : "https://itunes.apple.com/cn/app/qq/id444934666?mt=8";
-            window.location.href = 'http://weixin.qq.com/';
+            // window.location.href = 'http://weixin.qq.com/';
+            // window.location.href = navigator.userAgent.match(/android/i) ? "http://a.app.qq.com/o/simple.jsp?pkgname=com.yunmai.scale" : "https://itunes.apple.com/cn/app/qq/id444934666?mt=8";
           }, 2000);
         }
       })</script>

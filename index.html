@@ -11,16 +11,29 @@
   <body>
     <script>
       $("#btn").click(function () {
+        alert('点击')
         try {
-          if (navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
-            alert('ios')
+          var u = navigator.userAgent;
+          var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+          var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); 
+          if(isiOS){
+                alert('ios')
             alert('微信')
             window.location.href = "weixin://";
-          } else if (navigator.userAgent.match(/android/i)) {
-            alert('安卓')
+          }else if(isAndroid){
+              alert('安卓')
             alert('微信')
             window.location.href = "weixin://"; //app协议，以微信为例
           }
+          // if (navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
+          //   alert('ios')
+          //   alert('微信')
+          //   window.location.href = "weixin://";
+          // } else if (navigator.userAgent.match(/android/i)) {
+          //   alert('安卓')
+          //   alert('微信')
+          //   window.location.href = "weixin://"; //app协议，以微信为例
+          // }
         }
         catch (e) {
           setTimeout(function () {

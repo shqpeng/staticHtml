@@ -15,16 +15,27 @@
         try {
           var u = navigator.userAgent;
           var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
-          var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); 
-          if(isiOS){
-                alert('ios')
-            alert('微信')
-            window.location.href = "weixin://";
-          }else if(isAndroid){
-              alert('安卓')
-            alert('微信')
-            window.location.href = "weixin://"; //app协议，以微信为例
+          var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+          if (isiOS) {
+            window.location.href = "com.baidu.tieba://";//ios app协议
+            setTimeout(function () {
+              window.location.href = "https://itunes.apple.com/cn/app/id477927812";
+            }, 2000)
+          } else if (isAndroid) {
+            window.location.href = "com.baidu.tieba://app";//android app协议
+            setTimeout(function () {
+              window.location.href = "https://downpack.baidu.com/baidutieba_AndroidPhone_1019960r.apk";//android 下载地址
+            }, 2000)
           }
+          // if(isiOS){
+          //       alert('ios')
+          //   alert('微信')
+          //   window.location.href = "weixin://";
+          // }else if(isAndroid){
+          //     alert('安卓')
+          //   alert('微信')
+          //   window.location.href = "weixin://"; //app协议，以微信为例
+          // }
           // if (navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
           //   alert('ios')
           //   alert('微信')

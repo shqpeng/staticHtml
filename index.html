@@ -19,11 +19,13 @@
           var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
           var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
           if (isiOS) {
+            console.log('ios');
             window.location.href = "com.baidu.tieba://";//ios app协议
             setTimeout(function () {
               window.location.href = "https://itunes.apple.com/cn/app/id477927812";
             }, 2000)
           } else if (isAndroid) {
+            console.log('安卓');
             window.location.href = "com.baidu.tieba://app";//android app协议
             // setTimeout(function () {
             //   window.location.href = "https://downpack.baidu.com/baidutieba_AndroidPhone_1019960r.apk";//android 下载地址

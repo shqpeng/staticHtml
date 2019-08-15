@@ -9,6 +9,7 @@
   <button id="btn" style="width:300px;height:300px;display: flex;justify-items: center;align-items: center;line-height: 300px">点击</button>
 
   <body>
+    <script src="//cdn.bootcss.com/eruda/1.5.2/eruda.min.js"></script>
     <script>
       $("#btn").click(function () {
         alert('点击')
@@ -23,9 +24,9 @@
             }, 2000)
           } else if (isAndroid) {
             window.location.href = "com.baidu.tieba://app";//android app协议
-            setTimeout(function () {
-              window.location.href = "https://downpack.baidu.com/baidutieba_AndroidPhone_1019960r.apk";//android 下载地址
-            }, 2000)
+            // setTimeout(function () {
+            //   window.location.href = "https://downpack.baidu.com/baidutieba_AndroidPhone_1019960r.apk";//android 下载地址
+            // }, 2000)
           }
           // if(isiOS){
           //       alert('ios')

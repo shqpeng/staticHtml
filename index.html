@@ -9,8 +9,9 @@
   <button id="btn" style="width:300px;height:300px;display: flex;justify-items: center;align-items: center;line-height: 300px">点击</button>
 
   <body>
-    <script src="//cdn.bootcss.com/eruda/1.5.2/eruda.min.js"></script>
+    <script src="https://cdn.bootcss.com/eruda/1.5.2/eruda.min.js"></script>
     <script>
+      eruda.init();
       $("#btn").click(function () {
         alert('点击')
         try {
